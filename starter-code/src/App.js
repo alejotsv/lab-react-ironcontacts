@@ -1,19 +1,30 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Display from './components/Display'
 
 class App extends Component {
+
+  constructor(props){
+    super(props);
+    this.state = {};
+  }
+  
+
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
+     <div>
+       <h1>Iron Contacts</h1>
+       <table>
+         <tbody>
+          <tr>
+            <th><h2>Picture</h2></th>
+            <th><h2>Name</h2></th>
+            <th><h2>Popularity</h2></th>
+          </tr>
+          <Display number='100'/>
+         </tbody>
+       </table>       
+     </div>
     );
   }
 }
